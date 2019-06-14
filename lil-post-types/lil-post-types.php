@@ -27,3 +27,9 @@ add_action( 'init', 'lil_register_event_type' );
 require_once( LILPATH . '/taxonomies/register.php' );
 add_action( 'init', 'lil_register_size_taxonomy' );
 add_action( 'init', 'lil_register_location_taxonomy' );
+
+function lil_rewrite_flush() {
+    lil_register_business_type();
+    flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'lil_rewrite_flush' );

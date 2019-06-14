@@ -42,3 +42,10 @@ function lil_show_events() {
 
     wp_reset_query();
 }
+
+function lil_rewrite_flush() {
+    lil_register_business_type();
+    flush_rewrite_rules();
+}
+
+add_action( 'after_switch_theme', 'lil_rewrite_flush' );
