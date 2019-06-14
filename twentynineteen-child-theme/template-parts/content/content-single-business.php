@@ -43,6 +43,10 @@
 			)
 		);
 		?>
+		<section class="related-events">
+			<h3><?php _e( 'Upcoming Events', 'twentynineteen' ); ?></h3>
+			<?php lil_show_events(); ?>
+		</section>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
